@@ -1,0 +1,15 @@
+{
+  "domain": {
+    "env": {
+      "stage": "https://lexcampus.on-its-way.com/",
+      "prod": "live URL"
+    }
+  },
+  "API": {
+    "WP": "wp-json/",
+    "JWT": "jwt-auth/v1/"
+  },
+  "endpoint": {
+    "token": "token/"
+  }
+}
