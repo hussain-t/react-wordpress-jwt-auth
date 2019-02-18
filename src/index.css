@@ -6,9 +6,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f4f4f4;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.login-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.login-container form {
+  margin-top: 5em;
+}
+
+@media(min-width: 992px) {
+  .login-container form {
+    margin: 12em;
+    padding: 4em;
+    box-shadow: 3px 3px 15px 0 #dadada;
+  }
 }
