@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Alert } from 'react-bootstrap'
 import axios from "axios";
 
 import { domain, API, endpoint } from '../config/app.json'
 
+const AUTH_TOKEN = 'AUTH_TOKEN';
+
 class LoginForm extends Component {
   state = {
     validate: false,
+    loading: false,
     username: '',
     password: '',
     error: '',
@@ -15,17 +18,30 @@ class LoginForm extends Component {
   handleLogin = event => {
     event.preventDefault();
     const { username, password } = this.state;
+    this.setState({ loading: true, validate: true, error: false });
     axios.post(domain.env.stage + API.WP + API.JWT + endpoint.token, {
       username,
       password
     })
-    .then(user => {
-      console.log(user)
-    })
-    .catch(error => {
-      console.error(error.response.data.message)
-      this.setState({ validate: true, error: error.response.data.message });
-    })
+    .then(user => this.handleLoginSuccess(user))
+    .catch(error => this.handleLoginFail(error))
+  }
+
+  handleLoginSuccess = user => {
+    localStorage.setItem(AUTH_TOKEN, JSON.stringify(user));
+    console.log('user', user)
+    this.setState({
+      validate: false,
+      loading: false,
+      username: '',
+      password: '',
+      error: ''
+    });
+    this.props.history.push('/profile');
+  }
+
+  handleLoginFail = error => {
+    this.setState({ validate: true, loading: false, error: 'Invslid username / password' });
   }
 
   handleUsername = username => {
@@ -36,10 +52,26 @@ class LoginForm extends Component {
     this.setState({ password });
   }
 
+  renderError() {
+    if (this.state.error) {
+      return (
+        <Alert variant="danger">
+          {this.state.error}
+        </Alert>
+      )
+    } else if (this.state.loading) {
+      return (
+        <Alert variant="primary">
+          Loading...
+        </Alert>
+      )
+    }
+  }
+
   render() {
     const { validate } = this.state;
     return (
-      <div className="login-container">
+      <div className="container">
         <Form 
           method="POST" 
           noValidate
@@ -56,7 +88,7 @@ class LoginForm extends Component {
               onChange={event => this.handleUsername(event.target.value)}
               value={this.state.username}
             />
-            <Form.Control.Feedback type="invalid">{this.state.error}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Username cannot be empty!</Form.Control.Feedback>
           </Form.Group>
           <Form.Group controlId="password">
             <Form.Label>Password</Form.Label>
@@ -67,8 +99,9 @@ class LoginForm extends Component {
               onChange={event => this.handlePassword(event.target.value)}
               value={this.state.password}
             />
-            <Form.Control.Feedback type="invalid">{this.state.error}</Form.Control.Feedback>
+            <Form.Control.Feedback type="invalid">Password cannot be empty!</Form.Control.Feedback>
           </Form.Group>
+          {this.renderError()}
           <Button variant="primary" type="submit">
             Login
           </Button>

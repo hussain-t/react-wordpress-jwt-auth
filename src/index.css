@@ -14,9 +14,10 @@ code {
     monospace;
 }
 
-.login-container {
+.container {
   width: 70%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .login-container form {
