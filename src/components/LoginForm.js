@@ -23,7 +23,7 @@ class LoginForm extends Component {
       username,
       password
     })
-    .then(user => this.handleLoginSuccess(user))
+    .then(user => this.handleLoginSuccess(user.data))
     .catch(error => this.handleLoginFail(error))
   }
 
