@@ -31,3 +31,18 @@ code {
     box-shadow: 3px 3px 15px 0 #dadada;
   }
 }
+
+.user-snippet {
+  background: purple;
+  padding: 40px;
+  width: 150px;
+  height: 150px;
+  margin: 50px;
+  border-radius: 75px;
+}
+
+.user-snippet h1 {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 16px;
+}
