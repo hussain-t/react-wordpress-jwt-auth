@@ -18,7 +18,7 @@ class LoginForm extends Component {
     event.preventDefault();
     const { username, password } = this.state;
     this.setState({ loading: true, validate: true, error: false });
-    axios.post(domain.env.stage + API.WP + API.JWT + endpoint.token, {
+    axios.post(domain.env.siteUrl + API.WP + API.JWT + endpoint.token, {
       username,
       password
     })
