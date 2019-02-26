@@ -20,9 +20,9 @@ Go to `app.json` file and change the `siteUrl` value to yours.
 
 ## Covered features:
 
-👉 Client side form validations
-👉 Server side form validations
-👉 WordPress Authentication (login) with JWT
+👉 Client side form validations<br>
+👉 Server side form validations<br>
+👉 WordPress Authentication (login) with JWT<br>
 👉 Protected route with [React Router](https://reacttraining.com/react-router/)
 
 
