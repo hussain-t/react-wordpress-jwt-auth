@@ -11,6 +11,5 @@
   },
   "endpoint": {
     "token": "token/"
-  },
-  "token": "AUTH_TOKEN"
+  }
 }

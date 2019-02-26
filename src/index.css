@@ -42,8 +42,19 @@ code {
   }
 }
 
+.profile-container {
+  margin: 2em;
+  padding: 2em;
+  box-shadow: 3px 3px 15px 0 #dadada;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
 .user-snippet {
-  background: purple;
+  background: #981d9a;
   padding: 40px;
   width: 150px;
   height: 150px;

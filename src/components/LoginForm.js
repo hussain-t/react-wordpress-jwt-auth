@@ -3,8 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap'
 import axios from "axios";
 
 import { domain, API, endpoint } from '../config/app.json'
-
-const AUTH_TOKEN = 'AUTH_TOKEN';
+import { AUTH_TOKEN } from '../helper';
 
 class LoginForm extends Component {
   state = {

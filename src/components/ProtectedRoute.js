@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-const AUTH_TOKEN = 'AUTH_TOKEN';
+import { AUTH_TOKEN } from '../helper';
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const token = localStorage.getItem(AUTH_TOKEN);
