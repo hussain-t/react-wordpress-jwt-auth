@@ -15,18 +15,28 @@ code {
 }
 
 .container {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.login-container form {
-  margin-top: 5em;
+@media(min-width: 992px) {
+  .container {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+.container form {
+  margin: 2em;
+  padding: 2em;
+  box-shadow: 3px 3px 15px 0 #dadada;
 }
 
 @media(min-width: 992px) {
-  .login-container form {
-    margin: 12em;
+  .container form {
+    margin: 5em;
     padding: 4em;
     box-shadow: 3px 3px 15px 0 #dadada;
   }
