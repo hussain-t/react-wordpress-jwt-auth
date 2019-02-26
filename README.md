@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-![Login validation 1](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation1.png)
-![Login validation 2](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation2.png)
+![Login validation 1](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation1.png =400x)
+![Login validation 2](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation2.png =400x)
 ![Profile page](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/profile-page.png)
 
 
