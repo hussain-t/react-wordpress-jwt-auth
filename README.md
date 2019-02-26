@@ -1,7 +1,10 @@
 # React WordPress JWT Authentication
 
 ## Screenshots
-<img width="400" alt="woocommerce-guset-single" src="https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation1.png"><img width="400" alt="woocommerce-guset-single" src="https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation2.png"><img width="400" alt="woocommerce-guset-single" src="https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/profile-page.png">
+
+![Login validation 1](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation1.png)
+![Login validation 2](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/login-validation2.png)
+![Profile page](https://github.com/hussain-t/react-wordpress-jwt-auth/blob/master/src/images/profile-page.png)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
