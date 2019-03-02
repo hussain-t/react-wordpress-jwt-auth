@@ -1,4 +1,4 @@
-export const AUTH_TOKEN = window.location.href + 'AUTH_TOKEN';
+export const AUTH_TOKEN = window.location.host + '/AUTH_TOKEN';
 
 export const getUserSnippet = username => {
   debugger
