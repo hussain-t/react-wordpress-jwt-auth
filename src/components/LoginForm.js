@@ -17,7 +17,7 @@ class LoginForm extends Component {
   handleLogin = event => {
     event.preventDefault();
     const { username, password } = this.state;
-    this.setState({ loading: true, validate: true, error: false });
+    this.setState({ loading: true, validate: true, error: '' });
     axios.post(domain.env.siteUrl + API.WP + API.JWT + endpoint.token, {
       username,
       password
@@ -40,7 +40,7 @@ class LoginForm extends Component {
   }
 
   handleLoginFail = error => {
-    this.setState({ validate: true, loading: false, error: 'Invslid username / password' });
+    this.setState({ validate: true, loading: false, error: 'Invalid username / password' });
   }
 
   handleUsername = username => {
